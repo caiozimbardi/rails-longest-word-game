@@ -1,0 +1,12 @@
+
+<div class="container d-flex justify-content-center col-12 p-4">
+<p id="message"> <%= @result[:message]  %></p>
+</div>
+
+<div class="container d-flex justify-content-center col-12 p-4">
+<p id="score">Your score is <%= @result[:score] %></p>
+</div>
+
+<div class="container d-flex justify-content-center mb-6">
+      <p class="refresh" ><%=link_to "Play again!", new_path  %></p>
+</div>
