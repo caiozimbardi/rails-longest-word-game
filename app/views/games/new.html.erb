@@ -5,7 +5,7 @@
   <h2 class="mb-3">New Game</h2>
 </div>
 
-<div class="container d-flex justify-content-center mb-6">
+<div class="container d-flex justify-content-center col-12 mb-6">
     <% @letters.each do |letter| %>
     <span class="badge alert-secondary m-1"><%= letter.capitalize %></span>
     <% end %>
@@ -13,11 +13,11 @@
 
 <div class="container d-flex justify-content-center col-12 input-group p-3">
 <form action="/score" method="post" data-turbo="false">
-  <div class="container col-3 col-3 input-group mb-3">
+  <div class="container col-6 input-group mb-3">
     <label class="input-group mb-3" for="wordTyped">What is the longest word you can find?</label>
     <input type="text" name="word" class="form-control" id="wordTyped">
-    <div class="container col-3 col-3 input-group-append">
-      <button class="btn-lg btn-outline-secondary" type="submit" type="button">Play!</button>
+    <div class="container col-3 input-group-append">
+      <button id="play" class="btn-lg btn-outline-secondary" type="submit" type="button">Play!</button>
     </div>
   </div>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
